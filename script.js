@@ -8,12 +8,11 @@ SC.initialize({
 //       alert('Hello, ' + me.username); 
 //     });
 //   });
-// });
-
+// }); 
 // $(document).ready(function() {
-  SC.get('/tracks', { genres: 'electronic' }, function(tracks) {
-    $(tracks).each(function(index, track) {
-      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
-    });
+SC.get('/tracks', { genres: 'punk', streamable: true}, function(tracks) {
+  $(tracks).each(function(index, track) {
+    $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre + " " + track.video_url));
   });
-// });
+});
+ // });
