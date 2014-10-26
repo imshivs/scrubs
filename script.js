@@ -11,7 +11,7 @@ SC.initialize({
 // });
 
 // $(document).ready(function() {
-  SC.get('/tracks', { genres: 'pop' }, function(tracks) {
+  SC.get('/tracks', { genres: 'electronic' }, function(tracks) {
     $(tracks).each(function(index, track) {
       $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
     });
